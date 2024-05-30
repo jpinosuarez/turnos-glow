@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+/*import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import CategorySelectionPage from './pages/CategorySelectionPage';
+import './styles/main.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<CategorySelectionPage />} />            
+            {/* Agrega más rutas según sea necesario }
+          </Routes>
+        </div>
+        
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
+
+export default App;*/
+
+// src/App.js
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import CategorySelectionPage from './pages/CategorySelectionPage';
+import ServiceSelectionPage from './pages/ServiceSelectionPage';
+import './styles/main.css';
+
+const App = () => {
+  return (
+    <Router>
+      <div className="App">
+        <Header />
+        
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<CategorySelectionPage />} />
+            <Route path="/servicios/:category" element={<ServiceSelectionPage />} />            
+            {/* Agrega más rutas según sea necesario */}
+          </Routes>
+        </div>
+        
+        <Footer />
+      </div>
+    </Router>
+  );
+};
 
 export default App;
+

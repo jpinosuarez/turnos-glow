@@ -1,0 +1,17 @@
+/* src/styles/main.css */
+
+body, html, #root, .App {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  /* Asegúrate de incluir estilos adicionales según las necesidades de tu proyecto */
+  
