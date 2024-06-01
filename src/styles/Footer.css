@@ -1,12 +1,11 @@
-/* src/components/Footer.css */
+/* Estilo para el footer */
 
 .footer {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    text-align: center;
-    border-top: 1px solid #eaeaea;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0; /* Asegura que el footer esté al fondo */
+  width: 100%;
+}

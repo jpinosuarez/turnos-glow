@@ -15,6 +15,7 @@ const Hero = () => {
   return (
     <div className="hero">
       <img src={heroImage} alt="Hero" className="hero-image" />
+      <div className="hero-overlay"></div> {/* Capa de superposición */}
       <div className="hero-content">
         <h1>Glow Studio</h1>
         <button onClick={handleReservationClick} className="cta-button">

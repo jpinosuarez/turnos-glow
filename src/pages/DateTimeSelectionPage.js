@@ -47,8 +47,6 @@ export default DateTimeSelectionPage;*/
 // src/pages/DateTimeSelectionPage.js
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import DateSelection from '../components/DateSelection';
 import TimeSelection from '../components/TimeSelection';
 
@@ -68,8 +66,7 @@ const DateTimeSelectionPage = () => {
   };
 
   return (
-    <>
-      <Header />
+    <>      
       <div className="page-container">
         <h2>Selección de Fecha y Hora</h2>
         {!selectedDate ? (
@@ -77,8 +74,7 @@ const DateTimeSelectionPage = () => {
         ) : (
           <TimeSelection selectedDate={selectedDate} onTimeSelect={handleTimeSelect} />
         )}
-      </div>
-      <Footer />
+      </div>      
     </>
   );
 };

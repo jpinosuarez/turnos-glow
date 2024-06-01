@@ -19,12 +19,18 @@ const ServiceSelectionPage = () => {
     navigate(`/profesionales/${service.id}`, { state: { category, service } });
   };
 
+  const handleGoBack = () => {
+    navigate(-1); // Navegar hacia atrás en el historial del navegador
+  };
+
   return (
     <div className="page-container">
       <ServiceSelection category={category} onServiceSelect={handleServiceSelect} />
+      <button onClick={handleGoBack}>Volver</button>
     </div>
   );
 };
 
 export default ServiceSelectionPage;
+
 

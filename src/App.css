@@ -1,4 +1,4 @@
-.App {
+/*.App {
   text-align: center;
 }
 
@@ -35,4 +35,32 @@
   to {
     transform: rotate(360deg);
   }
+}*/
+
+/* src/styles/App.css */
+
+/* App.css */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Mínimo 100% del viewport vertical */
+}
+
+.main {
+  flex: 1; /* Ocupa todo el espacio disponible en el main */
+  overflow-y: auto; /* Agrega scrollbar vertical si es necesario */
+}
+
+/* Estilos adicionales para header y footer */
+.header {
+  background-color: #f0f0f0;
+  height: 60px; /* Altura fija del header */
+  flex-shrink: 0; /* Evita que el header se encoja al hacer scroll */
+}
+
+.footer {
+  background-color: #f0f0f0;
+  height: 60px; /* Altura fija del footer */
+  flex-shrink: 0; /* Evita que el footer se encoja al hacer scroll */
 }

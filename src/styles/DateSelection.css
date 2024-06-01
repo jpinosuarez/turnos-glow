@@ -1,4 +1,51 @@
+/* src/styles/DateSelection.css */
+
 .date-selection {
-  padding: 20px;
   text-align: center;
+  margin-top: 20px;
+}
+
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Altura del contenedor del calendario para ocupar toda la pantalla */
+}
+
+.react-calendar {
+  max-width: 400px; /* Ancho máximo del calendario */
+  background-color: #f0f0f0; /* Color de fondo del calendario */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.react-calendar__tile--active {
+  background-color: #007bff; /* Color de fondo del día seleccionado */
+  color: white;
+}
+
+.react-calendar__navigation {
+  background-color: #007bff; /* Color de fondo de los botones de navegación */
+  color: white;
+}
+
+.react-calendar__navigation__label {
+  font-size: 1.2rem; /* Tamaño de fuente de la etiqueta de navegación */
+}
+
+.react-calendar__month-view__days {
+  font-size: 1rem; /* Tamaño de fuente de los días del calendario */
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 0.75rem; /* Espaciado interno de los días del calendario */
+  height: 60px; /* Altura de cada día del calendario */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-calendar__tile:hover {
+  background-color: #e6e6e6; /* Color de fondo al pasar el mouse */
+  cursor: pointer;
 }

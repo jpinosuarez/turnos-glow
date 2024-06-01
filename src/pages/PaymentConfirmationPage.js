@@ -25,9 +25,8 @@ export default PaymentConfirmationPage;*/
 // src/pages/PaymentConfirmationPage.js
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import PaymentSummary from '../components/PaymentSummary';
+import '../styles/PaymentConfirmationPage.css'; // Importa los estilos locales
 
 const PaymentConfirmationPage = () => {
   const { serviceId, professionalId, date, time } = useParams();
@@ -38,8 +37,7 @@ const PaymentConfirmationPage = () => {
   };
 
   return (
-    <>
-      <Header />
+    <div className="payment-confirmation-page">
       <div className="page-container">
         <h2>Confirmación de Pago</h2>
         <PaymentSummary 
@@ -48,12 +46,12 @@ const PaymentConfirmationPage = () => {
           date={date}
           time={time}
         />
-        <button onClick={handlePayment}>Pagar Seña</button>
+        <button className="pay-button" onClick={handlePayment}>Pagar Seña</button>
       </div>
-      <Footer />
-    </>
+    </div>
   );
 };
 
 export default PaymentConfirmationPage;
+
 

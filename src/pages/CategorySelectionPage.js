@@ -29,9 +29,14 @@ const CategorySelectionPage = () => {
     navigate(`/servicios/${category.id}`, { state: { category } });
   };
 
+  const handleGoBack = () => {
+    navigate(-1); // Navega hacia atrás en el historial del navegador
+  };
+
   return (
     <div className="page-container">
       <CategorySelection onCategorySelect={handleCategorySelect} />
+      <button onClick={handleGoBack}>Volver</button>
     </div>
   );
 };

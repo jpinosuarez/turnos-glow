@@ -1,28 +1,37 @@
-/* src/components/Header.css */
+/* src/styles/Header.css */
 
 .header {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .nav-item a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .nav-item a:hover {
-    color: #007bff;
-  }
-  
+  display: flex;
+  justify-content: space-between; /* Alinea elementos a los extremos */
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff; /* Fondo del header */
+  color: white; /* Color del texto */
+}
+
+.logo img {
+  width: 80px; /* Ajusta el tamaño del logo según sea necesario */
+  height: auto;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 1.5rem; /* Espacio entre elementos del navbar */
+}
+
+.nav-item a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease; /* Transición suave para el color del texto */
+}
+
+.nav-item a:hover {
+  color: #464646; /* Color del texto al pasar el mouse */
+}
