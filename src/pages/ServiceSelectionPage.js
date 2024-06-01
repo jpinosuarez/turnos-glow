@@ -1,20 +1,30 @@
 // src/pages/ServiceSelectionPage.js
-
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import ServiceSelection from '../components/ServiceSelection';
 
 const ServiceSelectionPage = () => {
-  const { category } = useParams();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { category } = location.state || {};
 
-  // Aquí puedes utilizar 'category' para mostrar servicios relacionados
-  // Por ejemplo, cargar datos de servicios basados en la categoría seleccionada
+  useEffect(() => {
+    if (!category) {
+      console.error('Error: Categoría no encontrada');
+      navigate('/categorias');
+    }
+  }, [category, navigate]);
+
+  const handleServiceSelect = (service) => {
+    navigate(`/profesionales/${service.id}`, { state: { category, service } });
+  };
 
   return (
     <div className="page-container">
-      <h2>Seleccione un servicio para la categoría: {category}</h2>
-      {/* Componente o lógica para mostrar y seleccionar servicios */}
+      <ServiceSelection category={category} onServiceSelect={handleServiceSelect} />
     </div>
   );
 };
 
 export default ServiceSelectionPage;
+

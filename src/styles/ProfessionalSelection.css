@@ -1,0 +1,55 @@
+/* src/styles/ProfessionalSelection.css */
+
+.professional-selection {
+    padding: 20px;
+  }
+  
+  .back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .professional-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .professional-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .professional-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .professional-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .professional-info {
+    padding: 20px;
+  }
+  
+  .professional-info h4 {
+    margin: 10px 0;
+  }
+  

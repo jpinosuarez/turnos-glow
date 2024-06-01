@@ -35,38 +35,53 @@ export default CategorySelection;*/
 
 // src/components/CategorySelection.js
 
+// src/components/CategorySelection.js
+
+// src/components/CategorySelection.js
+
+// src/components/CategorySelection.js
+
+// src/components/CategorySelection.js
+
+// src/components/CategorySelection.js
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import '../styles/CategorySelection.css';
+import nailsImage from '../assets/images/nails.jpg';
+import eyesImage from '../assets/images/eyes.jpg';
+import hairImage from '../assets/images/hair.jpg';
 
-const CategorySelection = () => {
-  const [selectedCategory, setSelectedCategory] = React.useState(null);
-  const navigate = useNavigate();
+const categories = [
+  { id: 'unas', name: 'Uñas', image: nailsImage, description: 'Servicios de manicura y pedicura' },
+  { id: 'miradas', name: 'Miradas', image: eyesImage, description: 'Servicios de cejas y pestañas' },
+  { id: 'peluqueria', name: 'Peluquería', image: hairImage, description: 'Servicios de corte y peinado' },
+];
 
-  const handleCategorySelect = (category) => {
-    setSelectedCategory(category);
-    // Redirigir a la página de selección de servicios
-    navigate(`/servicios/${category}`);
+const CategorySelection = ({ onCategorySelect }) => {
+  const handleCategoryClick = (category) => {
+    onCategorySelect(category);
   };
 
-  const categories = ['Categoria 1', 'Categoria 2', 'Categoria 3'];
-
   return (
-    <div>
+    <div className="category-selection">
       <h3>Seleccione una categoría:</h3>
-      <ul>
+      <div className="category-cards">
         {categories.map((category, index) => (
-          <li key={index}>
-            <button onClick={() => handleCategorySelect(category)}>
-              {category}
-            </button>
-          </li>
+          <div
+            key={index}
+            className="category-card"
+            onClick={() => handleCategoryClick(category)}
+          >
+            <img src={category.image} alt={category.name} className="category-image" />
+            <div className="category-info">
+              <h4>{category.name}</h4>
+              <p>{category.description}</p>
+            </div>
+          </div>
         ))}
-      </ul>
-      {selectedCategory && (
-        <p>Categoría seleccionada: {selectedCategory}</p>
-      )}
+      </div>
     </div>
   );
 };
 
 export default CategorySelection;
+
